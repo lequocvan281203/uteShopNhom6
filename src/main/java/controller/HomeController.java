@@ -14,8 +14,8 @@ public class HomeController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        // Xử lý logic cho yêu cầu GET tại /home
-        response.getWriter().println("<h1>Xin chào từ HomeController!</h1>");
+        // Chuyển hướng yêu cầu tới trang home.jsp
+    	request.getRequestDispatcher("/pages/home.html").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 

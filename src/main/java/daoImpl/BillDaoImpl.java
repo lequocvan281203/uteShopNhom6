@@ -95,14 +95,30 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 
 	@Override
 	public void updateBill(BillModel bill) {
-		// TODO Auto-generated method stub
-		
+	    StringBuilder query = new StringBuilder(
+	        "UPDATE bill SET status = ?, total_price = ?, user_id = ? WHERE id = ?");
+	    
+	    // Truyền các tham số cần thiết vào câu lệnh
+	    Object[] parameters = {
+	        bill.getStatus(),           // Giả sử có trường status
+	        bill.getTotalPrice(),       // Giả sử có trường total_price
+	        bill.getUserID(),           // Giả sử có trường user_id
+	        bill.getBillID()            // Truyền id của hóa đơn cần cập nhật
+	    };
+	    
+	    // Thực hiện câu lệnh UPDATE
+	    update(query.toString(), parameters);
 	}
 
 	@Override
 	public void deleteBill(Long id) {
-		// TODO Auto-generated method stub
-		
+	    String query = "DELETE FROM bill WHERE id = ?";
+	    
+	    // Truyền tham số id vào câu lệnh DELETE
+	    Object[] parameters = { id };
+	    
+	    // Thực hiện câu lệnh DELETE
+	    update(query, parameters);
 	}
 
 	@Override
