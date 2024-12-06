@@ -10,12 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import jakarta.servlet.RequestDispatcher;
-//import jakarta.servlet.ServletException;
-//import jakarta.servlet.annotation.WebServlet;
-//import jakarta.servlet.http.HttpServlet;
-//import jakarta.servlet.http.HttpServletRequest;
-//import jakarta.servlet.http.HttpServletResponse;
 import model.CategoryModel;
 import model.UserModel;
 import service.CategoryService;
@@ -46,7 +40,7 @@ public class RegisterController extends HttpServlet{
 	    String password = req.getParameter("password");
 	    String fullName = req.getParameter("fullname");  // Thêm fullName
 	    String sdt = req.getParameter("sdt");  // Thêm số điện thoại
-	    String email = req.getParameter("email");  // Có thể dùng email nếu cần
+	    //String email = req.getParameter("email");  // Có thể dùng email nếu cần
 	    long roleId = 2; // Hoặc lấy từ form nếu bạn muốn chọn role từ phía người dùng
 
 	    // Kiểm tra tính hợp lệ của thông tin đăng ký
