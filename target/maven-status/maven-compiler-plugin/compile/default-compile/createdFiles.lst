@@ -34,6 +34,7 @@ utils\SessionUtil.class
 mapper\RowMapper.class
 serviceImpl\UserServiceImpl.class
 model\CategoryModel.class
+controller\ForgotPassword.class
 connection\DBconnectMySQL.class
 dao\GenericDao.class
 daoImpl\CategoryDaoImpl.class

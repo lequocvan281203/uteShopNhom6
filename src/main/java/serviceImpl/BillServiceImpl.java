@@ -9,72 +9,86 @@ import paging.Pageble;
 import service.BillService;
 
 public class BillServiceImpl implements BillService{
-	BillDao bill = new BillDaoImpl();
+	BillDao billDao = new BillDaoImpl();
 	@Override
 	public List<BillModel> findAll() {
-		return bill.findAll();
+		return billDao.findAll();
 	}
 
 	@Override
 	public List<BillModel> findAll(Pageble pageble) {
-		return bill.findAll(pageble);
+		return billDao.findAll(pageble);
 	}
 
 	@Override
 	public List<BillModel> findAllSearch(Pageble pageble, String key, String search) {
-		return bill.findAllSearch(pageble, key, search);
+		return billDao.findAllSearch(pageble, key, search);
 	}
 
 	@Override
 	public int getTotalItem() {
-		return bill.getTotalItem();
+		return billDao.getTotalItem();
 	}
 
 	@Override
 	public int getTotalItemSearch(String key, String search) {
-		return bill.getTotalItemSearch(key, search);
+		return billDao.getTotalItemSearch(key, search);
 	}
 
 	@Override
 	public Long insertBill(BillModel bill) {
-		Long id = this.bill.insertBill(bill);
+		Long id = this.billDao.insertBill(bill);
 		return id;
 	}
 
 	@Override
 	public void updateBill(BillModel bill) {
-		// TODO Auto-generated method stub
-		
+	    // Kiểm tra xem bill có hợp lệ hay không
+	    if (bill != null && bill.getBillID() != null) {
+	        // Gọi phương thức updateBill của BillDaoImpl để cập nhật dữ liệu
+	    	billDao.updateBill(bill);
+	    } else {
+	        // Xử lý trường hợp không có hóa đơn hợp lệ
+	        // Có thể ném ngoại lệ hoặc xử lý theo yêu cầu
+	        System.out.println("Invalid bill data.");
+	    }
 	}
 
 	@Override
 	public void deleteBill(Long id) {
-		// TODO Auto-generated method stub
-		
+	    // Kiểm tra xem id có hợp lệ không
+	    if (id != null) {
+	        // Gọi phương thức deleteBill của BillDaoImpl để xóa hóa đơn
+	        billDao.deleteBill(id);
+	    } else {
+	        // Xử lý trường hợp không có ID hợp lệ
+	        System.out.println("Invalid bill ID.");
+	    }
 	}
+
 
 	@Override
 	public BillModel getOne(Long id) 
 	{
-		return bill.getOne(id);
+		return billDao.getOne(id);
 	}
 
 	@Override
 	public BillModel ThanhToanBill(Long id) {
-		bill.ThanhToanBill(id);
-		return bill.getOne(id);
+		billDao.ThanhToanBill(id);
+		return billDao.getOne(id);
 	}
 
 	@Override
 	public BillModel HuyThanhToanBill(Long id) {
-		bill.HuyThanhToanBill(id);
-		return bill.getOne(id);
+		billDao.HuyThanhToanBill(id);
+		return billDao.getOne(id);
 	}
 
 	@Override
 	public void HuyDonHang(long[] ids) {
 		for(long id : ids) {
-			bill.HuyDonHang(id);
+			billDao.HuyDonHang(id);
 		}
 		
 	}
@@ -82,37 +96,37 @@ public class BillServiceImpl implements BillService{
 	@Override
 	public double GetTotalPrice() {
 		
-		return bill.GetTotalPrice();
+		return billDao.GetTotalPrice();
 	}
 
 	@Override
 	public int billToday() {
 		// TODO Auto-generated method stub
-		return bill.billToday();
+		return billDao.billToday();
 	}
 
 	@Override
 	public int getTotalItemDaThanhToan() {
 		// TODO Auto-generated method stub
-		return bill.getTotalItemDaThanhToan();
+		return billDao.getTotalItemDaThanhToan();
 	}
 
 	@Override
 	public int getTotalItemChuaThanhToan() {
 		// TODO Auto-generated method stub
-		return bill.getTotalItemChuaThanhToan();
+		return billDao.getTotalItemChuaThanhToan();
 	}
 
 	@Override
 	public int getTotalItemDaBiHuy() {
 		// TODO Auto-generated method stub
-		return bill.getTotalItemDaBiHuy();
+		return billDao.getTotalItemDaBiHuy();
 	}
 
 	@Override
 	public List<BillModel> revenueYear(String year) {
 		// TODO Auto-generated method stub
-		return bill.revenueYear(year);
+		return billDao.revenueYear(year);
 	}
 
 }
