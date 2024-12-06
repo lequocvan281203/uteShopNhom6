@@ -28,7 +28,7 @@ public class LoginController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-
+        request.getRequestDispatcher("pages/login.html").forward(request, response);
         // Kiểm tra nếu action là "login"
         if ("login".equals(action)) {
             List<CategoryModel> allCategory = categoryService.findAll();
