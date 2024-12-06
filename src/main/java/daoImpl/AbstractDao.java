@@ -2,7 +2,6 @@ package daoImpl;
 
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,6 +20,7 @@ public class AbstractDao<T> implements GenericDao<T> {
 	public PreparedStatement ps = null;
 	public ResultSet rs = null;
 
+	@SuppressWarnings("hiding")
 	@Override
 	public <T> List<T> query(String sql, RowMapper<T> RowMapper, Object... parameters) {
 		List<T> results = new ArrayList<>();

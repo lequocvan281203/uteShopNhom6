@@ -5,6 +5,7 @@ import java.util.List;
 import mapper.RowMapper;
 
 public interface GenericDao<T> {
+	@SuppressWarnings("hiding")
 	<T> List<T> query(String sql, RowMapper<T> RowMapper, Object... parameters);
 	// Logic thực thi SQL và ánh xạ kết quả vào đối tượng User
     // Chẳng hạn sử dụng JDBC hoặc JPA để truy vấn cơ sở dữ liệu
