@@ -1,0 +1,127 @@
+/* Tổng thể */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background-color: #007fff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  border-radius: 50%;
+}
+
+.header .menu-icons img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Carousel */
+.carousel img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Promo banner */
+.promo-banner {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+}
+
+/* Product card */
+.product-card {
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Social icons */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+.categories {
+    display: flex; /* Sử dụng Flexbox để sắp xếp hàng ngang */
+    justify-content: space-around; /* Cân đối khoảng cách giữa các mục */
+    align-items: center; /* Căn giữa theo trục dọc */
+    gap: 15px; /* Tạo khoảng cách giữa các mục */
+    flex-wrap: nowrap; /* Ngăn không cho xuống hàng */
+}
+
+.categories img {
+    max-width: 150px; /* Giới hạn chiều rộng hình ảnh */
+    height: auto; /* Duy trì tỷ lệ hình ảnh */
+    border-radius: 10px; /* Tùy chọn: bo góc cho ảnh */
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+
+.categories img:hover {
+    transform: scale(1.1); /* Phóng to nhẹ khi di chuột qua */
+}
+
+
+
+.header-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

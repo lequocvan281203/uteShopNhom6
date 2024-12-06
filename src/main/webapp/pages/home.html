@@ -4,46 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trang chủ UTE Shop</title>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<style>
-.header {
-	background-color: #007bff;
-	color: white;
-	padding: 10px;
-}
-
-.product-card {
-	margin: 15px;
-	padding: 10px;
-	border: 1px solid #ddd;
-	text-align: center;
-}
-
-.promo-banner {
-	background-color: #f9f9f9;
-	text-align: center;
-	padding: 20px;
-	margin: 15px 0;
-}
-
-.social-icons {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-}
-
-.social-icons img {
-	width: 40px;
-	margin: 5px;
-	cursor: pointer;
-}
-
-.menu-icons a img {
-	margin-left: 10px;
-	cursor: pointer;
-}
-</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="static/images/logo_uteshop.png"> 
 </head>
 <body>
 	<!-- Header -->
@@ -81,16 +44,18 @@
 	</div>
 
 	<!-- Promo -->
-	<div class="promo-banner">
-		<h3>[Khung khuyến mãi]</h3>
-	</div>
 	<div class="categories">
-		<a href="#"><img src="static/images/category/Phụ kiện công nghệ.jpg" alt="Danh mục 1"></a> <a
-			href="#"><img src="static/images/category/Sản phẩm làm đẹp.jpg" alt="Danh mục 2"></a> <a
-			href="#"><img src="static/images/category/Thời trang.jpg" alt="Danh mục 3"></a> <a
-			href="#"><img src="static/images/category/Đồ dùng học tập.jpg" alt="Danh mục 4"></a> <a
-			href="#"><img src="static/images/category/Đồ trang trí phòng.jpg" alt="Danh mục 5"></a>
+			<a href="#"><img
+				src="static/images/category/Phụ kiện công nghệ.jpg" alt="Danh mục 1" ></a>
+			<a href="#"><img
+				src="static/images/category/Sản phẩm làm đẹp.jpg" alt="Danh mục 2"></a>
+			<a href="#"><img src="static/images/category/Thời trang.jpg"
+				alt="Danh mục 3"></a>		
+			<a href="#"><img src="static/images/category/Đồ dùng học tập.jpg"
+				alt="Danh mục 4"></a> <a href="#"><img
+				src="static/images/category/Đồ trang trí phòng.jpg" alt="Danh mục 5"></a>
 	</div>
+	
 	<!-- Product Section -->
 	<div class="d-flex flex-wrap justify-content-around">
 		<c:forEach items="${products}" var="product">
