@@ -19,7 +19,7 @@ import utils.SessionUtil;
 
 public class AuthorizationFilter implements Filter {
     private ServletContext context;
-    
+
     // Khởi tạo Filter, lấy ServletContext
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -34,12 +34,12 @@ public class AuthorizationFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         String url = request.getRequestURI();  // Lấy URL đang được truy cập
-        
+
         // Kiểm tra xem URL có bắt đầu bằng "/admin" không, nếu có nghĩa là người dùng đang cố gắng truy cập vào trang admin
         if(url.startsWith(request.getContextPath() + "/admin")) {
             // Lấy thông tin người dùng từ session
             UserModel model = (UserModel) SessionUtil.getInstance().getValue(request, "USERMODEL");
-            
+
             if(model != null) {
                 // Kiểm tra vai trò người dùng
                 if(model.getRole().getCode().equals(SystemConstant.ADMIN)) {

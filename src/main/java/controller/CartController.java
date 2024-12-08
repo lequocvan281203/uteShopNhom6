@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 import model.CategoryModel;
 import service.CategoryService;
 import serviceImpl.CategoryServiceImpl;
@@ -29,7 +27,7 @@ public class CartController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		List<CategoryModel> allCategory = categoryservice.findAll();
 		req.setAttribute("allcategory", allCategory);
-		
+
 		RequestDispatcher rq = req.getRequestDispatcher("views/cart.jsp");
 		rq.forward(req, resp);
 	}

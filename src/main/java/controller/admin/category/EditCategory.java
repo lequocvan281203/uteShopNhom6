@@ -20,7 +20,7 @@ public class EditCategory extends HttpServlet  {
 
 	private static final long serialVersionUID = 1L;
 	CategoryService categoryService = new CategoryServiceImpl();
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");

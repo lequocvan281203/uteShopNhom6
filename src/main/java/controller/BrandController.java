@@ -23,7 +23,7 @@ import utils.FormUtil;
 @WebServlet(urlPatterns = { "/brand" })
 public class BrandController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    
+
     BrandService brandService = new BrandServiceImpl();
     CategoryService categoryService = new CategoryServiceImpl();
 
@@ -49,7 +49,7 @@ public class BrandController extends HttpServlet {
 
         req.setAttribute("allbrand", allBrand);
         req.setAttribute("page", model);  // Truyền thông tin trang vào request để có thể hiển thị trên giao diện
-        
+
         // Chuyển tiếp yêu cầu tới view
         RequestDispatcher rq = req.getRequestDispatcher("views/brand.jsp");
         rq.forward(req, res);
@@ -57,6 +57,6 @@ public class BrandController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      
+
     }
 }

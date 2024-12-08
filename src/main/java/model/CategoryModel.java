@@ -89,6 +89,6 @@ public class CategoryModel extends AbstractModel<CategoryModel>{
 		CategoryNews = categoryNews;
 	}
 
-	
+
 
 }

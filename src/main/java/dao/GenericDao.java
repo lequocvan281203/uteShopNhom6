@@ -18,7 +18,7 @@ public interface GenericDao<T> {
 
 	int count(String sql, Object... patameters);
 	// Đếm số lượng bản ghi của người dùng
-	
+
 	double getPrice(String sql, Object... patameters);
 	// Ví dụ tính tổng giá trị các đơn hàng của người dùng, hoặc giá trị khác liên quan đến người dùng
 }

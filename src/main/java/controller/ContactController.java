@@ -33,7 +33,7 @@ public class ContactController extends HttpServlet {
 
 		RequestDispatcher rq = req.getRequestDispatcher("views/contact.jsp");
 		rq.forward(req, resp);
-		
+
 		// Current page
 		req.setAttribute("page", "contact");
 	}
@@ -53,7 +53,7 @@ public class ContactController extends HttpServlet {
         UserModel user = new UserModel();
         user.setFullName(fullName);
         user.setSdt(phoneNumber);
-       
+
         // Display a success message or redirect back to contact page
         req.setAttribute("successMessage", "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ phản hồi sớm.");
         RequestDispatcher rq = req.getRequestDispatcher("views/contact.jsp");

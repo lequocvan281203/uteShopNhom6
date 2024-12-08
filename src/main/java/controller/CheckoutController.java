@@ -29,7 +29,7 @@ import serviceImpl.ProductServiceImpl;
 @WebServlet(urlPatterns = { "/checkout" })
 public class CheckoutController extends HttpServlet {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	CategoryService categoryservice = new CategoryServiceImpl();
@@ -53,9 +53,9 @@ public class CheckoutController extends HttpServlet {
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
-		
+
 		HttpSession httpSession = req.getSession();
-		Object objCart = httpSession.getAttribute("cart");	
+		Object objCart = httpSession.getAttribute("cart");
 		OrderItemModel orderItem = new OrderItemModel();
 		double totalprice = 0;
 		//Lấy ra danh sách các sản phẩm của đơn hàng đồng thời tính giá trị tổng đơn hàng
@@ -67,18 +67,18 @@ public class CheckoutController extends HttpServlet {
 				totalprice += orderitem.getProduct().getPrice() * orderitem.getAmount();
 				if(orderitem.getAmount() > productservice.getOne(orderitem.getProduct().getProductID()).getAmount()) {
 					System.out.println("Lỗi");
-					PrintWriter out = resp.getWriter();  
-					resp.setContentType("text/html");  
-					out.println("<script type=\"text/javascript\">");  
-					out.println("alert('Đặt hàng không thành công do sản phẩm không đủ hàng');");  
-					out.println("</script>");	
+					PrintWriter out = resp.getWriter();
+					resp.setContentType("text/html");
+					out.println("<script type=\"text/javascript\">");
+					out.println("alert('Đặt hàng không thành công do sản phẩm không đủ hàng');");
+					out.println("</script>");
 					return ;
 				}
 			}
 		}
 		//Phí ship
 		totalprice += 20000;
-		UserModel objUser = (UserModel)httpSession.getAttribute("USERMODEL");	
+		UserModel objUser = (UserModel)httpSession.getAttribute("USERMODEL");
 		String shippingaddress = req.getParameter("shippingaddress");
 		String note = req.getParameter("note");
 		BillModel bill = new BillModel();
@@ -89,7 +89,7 @@ public class CheckoutController extends HttpServlet {
 		bill.setNote(note);
 		bill.setStatus(0);
 		Long BillID = billservice.insertBill(bill);
-		
+
 		if (objCart != null) {
 			// ep ve dung kieu cua no khi them vao o phan them vao gio hang controller
 			@SuppressWarnings("unchecked")
@@ -100,16 +100,16 @@ public class CheckoutController extends HttpServlet {
 				productservice.updateProductAmount(orderitem.getProduct().getProductID(), orderitem.getProduct().getAmount()-orderitem.getAmount());
 			}
 		}
-		
+
 		httpSession.removeAttribute("cart");
-		
-		PrintWriter out = resp.getWriter();  
-		resp.setContentType("text/html");  
-		out.println("<script type=\"text/javascript\">");  
-		out.println("alert('Đặt hàng thành công');");  
+
+		PrintWriter out = resp.getWriter();
+		resp.setContentType("text/html");
+		out.println("<script type=\"text/javascript\">");
+		out.println("alert('Đặt hàng thành công');");
 		out.print("location='"+req.getContextPath()+"/userprofile?page=1&maxPageItem=9'");
 		out.println("</script>");
-	
+
 	}
 }
 

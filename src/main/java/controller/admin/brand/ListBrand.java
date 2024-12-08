@@ -42,7 +42,7 @@ public class ListBrand extends HttpServlet{
 			if(brandService.getTotalItemSearch(model.getSearch())==0) {
 				model.setTotalItem(1);
 			}
-			else 
+			else
 			{
 				model.setTotalItem(brandService.getTotalItemSearch(model.getSearch()));
 			}

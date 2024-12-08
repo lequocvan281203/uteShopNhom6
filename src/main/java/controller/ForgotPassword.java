@@ -35,7 +35,7 @@ public class ForgotPassword extends HttpServlet {
 		RequestDispatcher rq = req.getRequestDispatcher("views/forgotpassword.jsp");
 		rq.forward(req, res);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	    String username = req.getParameter("username");

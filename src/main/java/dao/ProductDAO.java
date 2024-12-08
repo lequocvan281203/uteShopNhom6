@@ -12,7 +12,7 @@ public interface ProductDAO {
 	List<ProductModel> getProductByPID(int ProductID);
 	List<ProductModel> getProductByName(String ProductName);
 	ProductModel getOne(Long productID);
-	
+
 	List<ProductModel> findAll(Pageble pageble);
 	List<ProductModel> findAllSearch(Pageble pageble, String key, String search);
 	int getTotalItem();
@@ -23,17 +23,17 @@ public interface ProductDAO {
 	List<ProductModel> findAllSearchPrice(Pageble pageble, String key, String search,Long startPrice, Long endPrice);
 	int getTotalItemPrice(Long startPrice, Long endPrice);
 	int getTotalItemSearchPrice(String key, String search,Long startPrice, Long endPrice);
-	
+
 	Long insertProduct(ProductModel productModel);
 	void updateProduct(ProductModel productModel);
 	void deleteProduct(Long id);
-	
+
 	int checkProductByBrandID(Long brandID);
 	int checkProductByCategoryID(Long categoryID);
 	int checkProductByCategoryIDChild(Long categoryID);
 	List<ProductModel> getTotalProductSell();
 	List<ProductModel> findAllOderByAmount();
 	void updateProductAmount(Long productID, int amount);
-	
+
 	int checkAmountProductAfterResetStatus(Long id,int SL);
 }

@@ -46,7 +46,7 @@ public class PromotionServiceImpl implements PromotionService{
 		for(long id : ids) {
 			promotionDao.deletePromotion(id);
 		}
-		
+
 	}
 	@Override
 	public List<PromotionModel> findAllSearch(Pageble pageble, String key, String Search) {

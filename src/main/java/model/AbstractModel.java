@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AbstractModel<T> {
 	private Long id;
-	private long[] ids;	
+	private long[] ids;
 	private List<T> listResult = new ArrayList<>();
 	private Integer page;
 	private Integer maxPageItem;
@@ -16,7 +16,7 @@ public class AbstractModel<T> {
 	private String type;
 	private String key;
 	private String search;
-	
+
 	public String getSortName() {
 		return sortName;
 	}
@@ -53,8 +53,8 @@ public class AbstractModel<T> {
 	public void setTotalItem(Integer totalItem) {
 		this.totalItem = totalItem;
 	}
-	
-	
+
+
 	public long[] getIds()
 	{
 		return ids;
@@ -92,7 +92,7 @@ public class AbstractModel<T> {
 	public void setSearch(String search) {
 		this.search = search;
 	}
-	
 
-	
+
+
 }

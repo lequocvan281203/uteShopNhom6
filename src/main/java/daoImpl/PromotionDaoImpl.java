@@ -9,7 +9,7 @@ import paging.Pageble;
 
 public class PromotionDaoImpl extends AbstractDao<PromotionModel> implements PromotionDao{
 	@Override
-	public List<PromotionModel> findAll() 
+	public List<PromotionModel> findAll()
 	{
 		String sql = "SELECT promotion.*,ProductName FROM promotion inner join product on promotion.productID = product.productID";
 		return query(sql, new PromotionMapper());
@@ -34,8 +34,8 @@ public class PromotionDaoImpl extends AbstractDao<PromotionModel> implements Pro
 	public PromotionModel getOne(Long id) {
 		String sql ="SELECT promotion.*,ProductName FROM promotion inner join product on promotion.productID = product.productID where PromotionID = ?";
 		List<PromotionModel> promotionModels = query(sql, new PromotionMapper(), id);
-		return promotionModels.isEmpty() ? null : promotionModels.get(0); 
-		
+		return promotionModels.isEmpty() ? null : promotionModels.get(0);
+
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class PromotionDaoImpl extends AbstractDao<PromotionModel> implements Pro
 	@Override
 	public void updatePromotion(PromotionModel promotionModel) {
 		String sql = "UPDATE promotion SET  StartDate = ?,EndDate = ?,SaleOff = ? WHERE PromotionID = ?";
-		update(sql, promotionModel.getStartDate(),promotionModel.getEndDate(),promotionModel.getSaleOff(),promotionModel.getPromotionID());	
+		update(sql, promotionModel.getStartDate(),promotionModel.getEndDate(),promotionModel.getSaleOff(),promotionModel.getPromotionID());
 	}
 
 	@Override

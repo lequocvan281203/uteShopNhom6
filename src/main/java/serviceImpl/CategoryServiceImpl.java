@@ -16,7 +16,7 @@ public class CategoryServiceImpl implements CategoryService {
 		return categorydao.findAll();
 	}
 
-	
+
 
 	@Override
 	public List<CategoryModel> findAllPaging(Pageble pageble) {
@@ -58,7 +58,7 @@ public class CategoryServiceImpl implements CategoryService {
 		for(long id : ids) {
 			categorydao.deleteCategory(id);
 		}
-		
+
 	}
 
 

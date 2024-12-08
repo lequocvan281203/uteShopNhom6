@@ -90,6 +90,6 @@ public class CategoryDaoImpl extends AbstractDao<CategoryModel> implements Categ
 	}
 
 
-	
+
 
 }

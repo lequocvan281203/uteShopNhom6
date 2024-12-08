@@ -12,13 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 public class HomeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    @Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Chuyển hướng yêu cầu tới trang home.jsp
     	request.getRequestDispatcher("pages/home.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Xử lý logic cho yêu cầu POST tại /home
     }

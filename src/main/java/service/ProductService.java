@@ -13,7 +13,7 @@ public interface ProductService {
 	List<ProductModel> getProductByName(String ProductName);
 	ProductModel getOne(Long productID);
 	//Paging
-	
+
 	List<ProductModel> findAll(Pageble pageble);
 	List<ProductModel> findAllSearch(Pageble pageble,String key,String search);
 	int getTotalItem();
@@ -24,17 +24,17 @@ public interface ProductService {
 	List<ProductModel> findAllSearchPrice(Pageble pageble, String key, String search,Long startPrice, Long endPrice);
 	int getTotalItemPrice(Long startPrice, Long endPrice);
 	int getTotalItemSearchPrice(String key, String search,Long startPrice, Long endPrice);
-	
+
 	ProductModel insertProduct(ProductModel productModel);
-	ProductModel updateProduct(ProductModel productModel); 
+	ProductModel updateProduct(ProductModel productModel);
 	void updateProductAmount(Long productID, int amount);
 	void deleteProducts(long[] ids);
-	
+
 	int checkProductByBrandID(Long brandID);
 	int checkProductByCategoryID(Long categoryID);
 	int checkProductByCategoryIDChild(Long categoryID);
 	List<ProductModel> getTotalProductSell();
 	List<ProductModel> findAllOderByAmount();
-	
+
 	int checkAmountProductAfterResetStatus(Long id,int SL);
 }

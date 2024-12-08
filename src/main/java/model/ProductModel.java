@@ -14,7 +14,7 @@ public class ProductModel extends AbstractModel<ProductModel> {
 	private Long brandID;
 	private Integer Amount;
 	private List<String> imageNames;
-	
+
 
 	public String getProductName() {
 		return ProductName;
@@ -124,6 +124,6 @@ public class ProductModel extends AbstractModel<ProductModel> {
 		Price = price;
 	}
 
-	
+
 
 }

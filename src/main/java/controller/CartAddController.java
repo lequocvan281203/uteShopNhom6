@@ -27,7 +27,7 @@ public class CartAddController extends HttpServlet {
         try {
             Long PID = Long.parseLong(req.getParameter("pid"));
             int Amount = Integer.parseInt(req.getParameter("amount"));
-            
+
             if (Amount <= 0) {
                 res.sendRedirect(req.getContextPath() + "/cart");
                 return;
@@ -65,7 +65,7 @@ public class CartAddController extends HttpServlet {
             }
 
             session.setAttribute("cart", cart);
-            
+
             // Quay lại trang giỏ hàng hoặc trang trước đó
             String referer = req.getHeader("referer");
             if (referer != null) {
@@ -78,7 +78,7 @@ public class CartAddController extends HttpServlet {
             res.sendRedirect(req.getContextPath() + "/cart");
         }
     }
-    
+
     @Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub

@@ -26,7 +26,8 @@ public class LoginController extends HttpServlet {
     private CategoryService categoryService = new CategoryServiceImpl();
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         request.getRequestDispatcher("pages/login.html").forward(request, response);
         // Kiểm tra nếu action là "login"
@@ -45,12 +46,12 @@ public class LoginController extends HttpServlet {
             // Forward đến trang login.jsp
             RequestDispatcher rd = request.getRequestDispatcher("/views/login.jsp");
             rd.forward(request, response);
-        } 
+        }
         // Kiểm tra nếu action là "loguot" để xử lý đăng xuất
         else if ("loguot".equals(action)) {
             SessionUtil.getInstance().removeValue(request, "USERMODEL");
             response.sendRedirect(request.getContextPath() + "/home");  // Chuyển hướng về trang chủ
-        } 
+        }
         // Nếu không có action, forward về trang home
         else {
             RequestDispatcher rd = request.getRequestDispatcher("/views/home.jsp");
@@ -58,7 +59,8 @@ public class LoginController extends HttpServlet {
         }
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userName = request.getParameter("username");
         String password = request.getParameter("password");
 

@@ -98,12 +98,12 @@ public class ProductServiceImpl implements ProductService {
 		for(long id : ids) {
 			productdao.deleteProduct(id);
 		}
-		
+
 	}
 
 	@Override
 	public List<ProductModel> findAllSearchAll(Pageble pageble, String key, String search) {
-		
+
 		return productdao.findAllSearchAll(pageble, key, search);
 	}
 

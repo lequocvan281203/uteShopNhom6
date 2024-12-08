@@ -8,10 +8,10 @@ import model.BrandModel;
 import paging.Pageble;
 import service.BrandService;
 
-public class BrandServiceImpl implements BrandService 
+public class BrandServiceImpl implements BrandService
 {
 	BrandDao brandDao = new BrandDaoImpl();
-	
+
 	@Override
 	public List<BrandModel> findAll() {
 		return brandDao.findAll();
@@ -30,7 +30,7 @@ public class BrandServiceImpl implements BrandService
 	}
 
 	@Override
-	public BrandModel getOne(Long id) 
+	public BrandModel getOne(Long id)
 	{
 		return brandDao.getOne(id);
 	}
@@ -52,7 +52,7 @@ public class BrandServiceImpl implements BrandService
 		for(Long id : ids) {
 			brandDao.deleteBrand(id);
 		}
-		
+
 	}
 
 	@Override

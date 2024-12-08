@@ -28,7 +28,7 @@ public class OrderItemDaoImpl extends AbstractDao<OrderItemModel> implements Ord
 		Long id = insert(query, orderitem.getBillID(), orderitem.getProduct().getProductID(), orderitem.getAmount());
 		return id;
 	}
-	
+
 	@Override
 	public void updateOrderItem(OrderItemModel orderitem) {
 	    String query = "UPDATE orderitem SET Quantity = ? WHERE BillID = ? AND ProductID = ?";

@@ -68,7 +68,7 @@ public class BillServiceImpl implements BillService{
 
 
 	@Override
-	public BillModel getOne(Long id) 
+	public BillModel getOne(Long id)
 	{
 		return billDao.getOne(id);
 	}
@@ -90,12 +90,12 @@ public class BillServiceImpl implements BillService{
 		for(long id : ids) {
 			billDao.HuyDonHang(id);
 		}
-		
+
 	}
 
 	@Override
 	public double GetTotalPrice() {
-		
+
 		return billDao.GetTotalPrice();
 	}
 
