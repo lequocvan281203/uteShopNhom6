@@ -19,7 +19,7 @@
 				<!-- Price Start -->
 				<div class="border-bottom mb-4 pb-4">
 					<h5 class="font-weight-semi-bold mb-4">Filter by price</h5>
-					<form id="price-filter" action="http://localhost:8080/WEB_FINAL_PROJECT/shop" method="get">
+					<form id="price-filter" action="${pageContext.request.contextPath}/shop" method="get">
 					<div
 							class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
 							<input type="radio" class="custom-control-input" name='price' id="price-999" value="0-0" checked>
