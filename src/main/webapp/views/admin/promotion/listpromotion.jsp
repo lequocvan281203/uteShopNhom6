@@ -178,12 +178,12 @@ function deletePromotion(data) {
             contentType: 'application/json',
             data: JSON.stringify(data),
             success: function (result) {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-promotion-list?page="+${model.page}+"&maxPageItem=10";
+            	window.location.href = "/uteShopNhom6/admin-promotion-list?page="+${model.page}+"&maxPageItem=10";
             	alert("Xóa thành công.");
             },
             error: function (error) 
             {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-promotion-list?page="+${model.page}+"&maxPageItem=10";
+            	window.location.href = "/uteShopNhom6/admin-promotion-list?page="+${model.page}+"&maxPageItem=10";
             	alert("Lỗi rồi");
             	
             }

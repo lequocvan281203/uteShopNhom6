@@ -190,10 +190,10 @@ $("#productName").change(function (e){
 		 if(idProducts[i]==productID){
 			  if (confirm("Đã có thông tin khuyến mã sản phẩm này bạn có muốn chuyển đến xem chi tiết")) 
 			  {
-				  window.location.href = "/WEB_FINAL_PROJECT/admin-promotion-edit?promotionID="+idPromotions[i]+"";
+				  window.location.href = "/uteShopNhom6/admin-promotion-edit?promotionID="+idPromotions[i]+"";
 			  }	
 			  else{
-				  window.location.href = "/WEB_FINAL_PROJECT/admin-promotion-edit";
+				  window.location.href = "/uteShopNhom6/admin-promotion-edit";
 			  }
 		 }
 	 }

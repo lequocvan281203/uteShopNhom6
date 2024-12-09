@@ -165,13 +165,13 @@
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (result) { //result la ket qua tra ve vd : newModel,...
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-category-edit?categoryID=${model.categoryID}";
+            	window.location.href = "/uteShopNhom6/admin-category-edit?categoryID=${model.categoryID}";
             	$('#Error').text("");
             	alert("Cập nhập thành công");
             },
             error: function (error) {
             	if (error.status === 400) {
-            		window.location.href = "/WEB_FINAL_PROJECT/admin-category-edit?categoryID=${model.categoryID}";
+            		window.location.href = "/uteShopNhom6/admin-category-edit?categoryID=${model.categoryID}";
             		alert("Lỗi rồi bạn vừa xóa một số thể loại đang còn sử dụng cho một số sản phẩm");
             	}
             	else{

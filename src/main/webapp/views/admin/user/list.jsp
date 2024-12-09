@@ -252,7 +252,7 @@
         dataType: 'json',
         success: function (result) { //result la ket qua tra ve vd : newModel,...
         	//location.reload(); loadlaitrang
-        	window.location.href = "/WEB_FINAL_PROJECT/admin-user-list?page=${model.page}&maxPageItem=7";
+        	window.location.href = "/uteShopNhom6/admin-user-list?page=${model.page}&maxPageItem=7";
         	alert("Đã đặt lại trạng thái tài khoản");
         },
         error: function (error) {
@@ -284,11 +284,11 @@
             data: JSON.stringify(data),
             success: function (result) 
             {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-user-list?page=1&maxPageItem=7&message=delete_success";
+            	window.location.href = "/uteShopNhom6/admin-user-list?page=1&maxPageItem=7&message=delete_success";
             },
             error: function (error) 
             {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-user-list?page=1&maxPageItem=7&message=error_system";
+            	window.location.href = "/uteShopNhom6/admin-user-list?page=1&maxPageItem=7&message=error_system";
             	
             }
         });

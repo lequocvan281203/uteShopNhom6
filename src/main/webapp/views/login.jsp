@@ -15,7 +15,7 @@
 
 					<div class="form-outline mb-3">
 						<label class="form-label" for="userName2">Tài khoản</label> 
-						<input type="text" id="userName2" name="userName" class="form-control form-control-lg " />
+						<input type="text" id="userName2" name="username" class="form-control form-control-lg " />
 						<div id="userNameError2" class="text-danger"
 							style="font-size: 14px; font-weight: bold;"></div>
 					</div>

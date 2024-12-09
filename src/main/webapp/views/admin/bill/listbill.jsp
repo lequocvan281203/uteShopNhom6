@@ -229,7 +229,7 @@ function ThanhToanBill(data){
         dataType: 'json',
         success: function (result) { //result la ket qua tra ve vd : newModel,...
         	//location.reload(); loadlaitrang
-        	window.location.href = "/WEB_FINAL_PROJECT/admin-bill-list?page=${model.page}&maxPageItem=9";
+        	window.location.href = "/uteShopNhom6/admin-bill-list?page=${model.page}&maxPageItem=9";
         	alert("Thanh toán thành công");
         },
         error: function (error) {
@@ -257,7 +257,7 @@ function HuyThanhToanBill(data){
         dataType: 'json',
         success: function (result) { //result la ket qua tra ve vd : newModel,...
         	//location.reload(); loadlaitrang
-        	window.location.href = "/WEB_FINAL_PROJECT/admin-bill-list?page=${model.page}&maxPageItem=9";
+        	window.location.href = "/uteShopNhom6admin-bill-list?page=${model.page}&maxPageItem=9";
         	alert("Đã đặt lại trạng thái thanh toán");
         },
         error: function (error) {
@@ -296,12 +296,12 @@ function HuyDonHang(data) {
             contentType: 'application/json',
             data: JSON.stringify(data),
             success: function (result) {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-bill-list?page=${model.page}&maxPageItem=9";
+            	window.location.href = "/uteShopNhom6/admin-bill-list?page=${model.page}&maxPageItem=9";
             	alert("Đã hủy đơn hàng.");
             },
             error: function (error) 
             {
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-bill-list?page=${model.page}&maxPageItem=9";
+            	window.location.href = "/uteShopNhom6/admin-bill-list?page=${model.page}&maxPageItem=9";
             	alert("Lỗi rồi");
             	
             }

@@ -38,7 +38,7 @@
 					class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
 					<a href="home" class="text-decoration-none d-block d-lg-none">
 						<h1 class="m-0 display-5 font-weight-semi-bold">
-							<span class="text-primary font-weight-bold border px-3 mr-1">UTESHOPPING</span>
+							<span class="text-primary font-weight-bold border px-3 mr-1">UTESHOP</span>
 						</h1>
 					</a>
 					<button type="button" class="navbar-toggler" data-toggle="collapse"
@@ -63,7 +63,7 @@
 								class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 								<div class="p-3" style="max-width: 700px;">
 									<h4 class="text-white text-uppercase font-weight-medium mb-3">Giảm ngay 10% cho đơn hàng đầu tiên</h4>
-									<h3 class="display-4 text-white font-weight-semi-bold mb-4">Mỹ phẩm hàng hiệu</h3>
+									<h3 class="display-4 text-white font-weight-semi-bold mb-4">Sản Phẩm hàng hiệu</h3>
 									<a href="shop?page=1&maxPageItem=9" class="btn btn-light py-2 px-3">Mua sắm ngay</a>
 								</div>
 							</div>

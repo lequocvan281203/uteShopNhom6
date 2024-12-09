@@ -34,7 +34,7 @@
 			<div class="col-lg-3 d-none d-lg-block">
 				<a href="home" class="text-decoration-none">
 					<h1 class="m-0 display-5 font-weight-semi-bold">
-						<span class="text-primary font-weight-bold px-3 mr-1">OriShop</span>
+						<span class="text-primary font-weight-bold px-3 mr-1">UTESHOP</span>
 					</h1>
 				</a>
 			</div>

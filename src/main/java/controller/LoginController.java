@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import  jakarta.servlet.RequestDispatcher;
-import  jakarta.servlet.ServletException;
-import  jakarta.servlet.annotation.WebServlet;
-import  jakarta.servlet.http.HttpServlet;
-import  jakarta.servlet.http.HttpServletRequest;
-import  jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import model.CategoryModel;
 import model.UserModel;
@@ -70,6 +70,10 @@ public class LoginController extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
+            // In thông tin đăng nhập ra console
+            System.out.println("Tên đăng nhập: " + username);
+            System.out.println("Mật khẩu: " + password); 
+            
             // Sử dụng phương thức findByUserNamePasswordStatus để kiểm tra đăng nhập
             UserModel user = userService.findByUserNamePasswordStatus(username, password);
 
