@@ -6,7 +6,7 @@
         <div class="footer-content">
 						<span class="bigger-120">
 							<span class="blue bolder">HCMUTE</span>
-							OriShop &copy; 2023-2024
+							UTESHOP &copy; 2024-2025
 						</span>
 
             &nbsp; &nbsp;

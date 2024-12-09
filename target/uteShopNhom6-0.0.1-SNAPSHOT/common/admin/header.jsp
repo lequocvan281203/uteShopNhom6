@@ -39,7 +39,7 @@
 						
                 <li class="light-blue">
 					<a data-toggle="dropdown" href="#" class="dropdown-toggle" style="padding: 0 16px 0 8px!important;">
-						<img class="nav-user-photo" src="<c:url value='/template/admin/assets/avatars/toan.jpg'/>" />
+						<img class="nav-user-photo" src="<c:url value='/template/admin/assets/avatars/avatar.png'/>" />
 						<span class="user-info">
 							<small style="font-size: 14px!important;">Xìn chào,</small>
 							${USERMODEL.fullName}

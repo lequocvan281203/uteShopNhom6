@@ -35,11 +35,11 @@ CREATE TABLE `category` (
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 INSERT INTO `category` VALUES 
-(1,'Phụ kiện công nghệ', 'https://drive.google.com/file/d/1Nsx-1gEpi1bEWG5mpxflS6-98z_ZexPf/view?usp=drive_link','<i class=\"fa fa-user\"></i>',0),
-(2, 'Đồ dùng học tập', 'https://drive.google.com/file/d/1FzHRp3SbW2opm00wV-he3GYg9GshY7YX/view?usp=drive_link','<i class=\"fa fa-child\"></i>',0),
-(3,'Thời trang', 'https://drive.google.com/file/d/1NT9vQiUTh19_2Fb_ClkIl9Av-u6nfhIZ/view?usp=drive_link','<i class=\"fab fa-gitlab\"></i>',0),
-(4,'Đồ trang trí phòng', 'https://drive.google.com/file/d/16igxWA952mNs6KBwhgnRUxlPQt6j-_lO/view?usp=drive_link','<i class=\"fa fa-pills\"></i>',0),
-(5, 'Sản phẩm làm đẹp', 'https://drive.google.com/file/d/1RXF99WH-zVOIvpzJYlbNgvrOTEQPLrzx/view?usp=drive_link','<i class=\"fa fa-capsules\"></i>',0);
+(1,'Phụ kiện công nghệ', 'static/images/category/Phụ kiện công nghệ.jpg','<i class=\"fa fa-user\"></i>',0),
+(2, 'Đồ dùng học tập', 'static/images/category/Đồ dùng học tập.jpg','<i class=\"fa fa-user\"></i>',0),
+(3,'Thời trang', 'static/images/category/Thời trang.jpg','<i class=\"fa fa-user\"></i>',0),
+(4,'Đồ trang trí phòng', 'static/images/category/Đồ trang trí phòng.jpg','<i class=\"fa fa-user\"></i>',0),
+(5, 'Sản phẩm làm đẹp', 'static/images/category/Sản phẩm làm đẹp.jpg','<i class=\"fa fa-user\"></i>',0);
 -- (6,'<i class=\"fa fa-list\"></i>',0)
 
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
