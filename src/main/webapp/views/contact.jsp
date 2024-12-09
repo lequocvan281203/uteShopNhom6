@@ -111,7 +111,7 @@
 				
 			</div>
 			<div>
-				<img alt="Contact" src="<c:url value = "/template/img/contact.png"/>" style="max-width: 700px; border-radius: 50px">
+				<img alt="Contact" src="<c:url value = "template/img/contact.png"/>" style="max-width: 700px; border-radius: 50px">
 			</div>
 		
 		</div>

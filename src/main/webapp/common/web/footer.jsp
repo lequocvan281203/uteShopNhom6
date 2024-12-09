@@ -8,18 +8,18 @@
 				<a href="" class="text-decoration-none">
 					<h1 class="mb-4 display-5 font-weight-semi-bold">
 						<span
-							class="text-primary font-weight-bold border border-white px-3 mr-1">OriShop</span>
+							class="text-primary font-weight-bold border border-white px-3 mr-1">UTESHOP</span>
 					</h1>
 				</a>
-				<p>Shop bán mỹ phẩm số 1 Võ Văn Ngân</p>
+				<p>Shop bán hàng số 1 Võ Văn Ngân</p>
 				<p class="mb-2">
 					<i class="fa fa-map-marker-alt text-primary mr-3"></i>Số 1, Võ Văn Ngân, TP.Thủ Đức
 				</p>
 				<p class="mb-2">
-					<i class="fa fa-envelope text-primary mr-3"></i>orishop@gmail.com
+					<i class="fa fa-envelope text-primary mr-3"></i>uteshop@gmail.com
 				</p>
 				<p class="mb-0">
-					<i class="fa fa-phone-alt text-primary mr-3"></i>+012-1212-121212
+					<i class="fa fa-phone-alt text-primary mr-3"></i>+84 123 456 899
 				</p>
 			</div>
 			<div class="col-lg-8 col-md-12">
