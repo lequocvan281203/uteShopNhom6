@@ -22,8 +22,8 @@ import utils.FormUtil;
 
 @WebServlet(urlPatterns = { "/shop" })
 public class ShopController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	CategoryService categoryservice = new CategoryServiceImpl();
+    private static final long serialVersionUID = 1L;
+    CategoryService categoryservice = new CategoryServiceImpl();
     ProductService productservice = new ProductServiceImpl();
 
     @Override
@@ -32,20 +32,25 @@ public class ShopController extends HttpServlet {
         res.setCharacterEncoding("UTF-8");
         req.setCharacterEncoding("UTF-8");
 
-        // Get all categories for navbar
+        // Lấy danh sách tất cả các danh mục để hiển thị trên navbar
         List<CategoryModel> allCategory = categoryservice.findAll();
         req.setAttribute("allcategory", allCategory);
 
-        // Create a ProductModel to handle search and pagination
+        // Tạo ProductModel để xử lý tìm kiếm và phân trang
         ProductModel model = FormUtil.toModel(ProductModel.class, req);
+
+        // Lấy giá trị từ request cho khoảng giá và tìm kiếm
         String startPrice = req.getParameter("startPrice");
         String endPrice = req.getParameter("endPrice");
+        String searchKey = req.getParameter("key");
+        String search = req.getParameter("search");
 
-        // Page Request for Pagination
+        // Phân trang
         Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem());
 
-        if (model.getKey() == null && model.getSearch() == null) {
-            // No search criteria, handle price filtering
+        // Kiểm tra nếu không có tìm kiếm hoặc lọc giá
+        if (searchKey == null && search == null) {
+            // Lọc theo khoảng giá nếu có
             if (startPrice != null && endPrice != null) {
                 try {
                     Long start = Long.parseLong(startPrice);
@@ -54,30 +59,50 @@ public class ShopController extends HttpServlet {
                     model.setTotalItem(productservice.getTotalItemPrice(start, end));
                     model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
                 } catch (NumberFormatException e) {
-                    // Handle invalid price format (maybe show an error message or reset)
-                    req.setAttribute("error", "Invalid price range.");
+                    // Xử lý lỗi nếu khoảng giá không hợp lệ
+                    req.setAttribute("error", "Khoảng giá không hợp lệ.");
                 }
             } else {
+                // Nếu không có lọc giá, hiển thị tất cả sản phẩm
                 model.setListResult(productservice.findAll(pageble));
                 model.setTotalItem(productservice.getTotalItem());
                 model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
             }
         } else {
-            // Handle search functionality if there's a key or search parameter
-            String searchKey = model.getKey();
-            String searchValue = model.getSearch();
-            model.setListResult(productservice.findAllSearch(pageble, searchKey, searchValue));
-            model.setTotalItem(productservice.getTotalItemSearch(searchKey, searchValue));
-            model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+            // Tìm kiếm sản phẩm
+            if (searchKey != null && !searchKey.isEmpty()) {
+                model.setListResult(productservice.findAllSearch(pageble, searchKey, search));
+                model.setTotalItem(productservice.getTotalItemSearch(searchKey, search));
+                model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+            } else {
+                // Nếu không có tìm kiếm từ khóa, chỉ lọc theo khoảng giá
+                if (startPrice != null && endPrice != null) {
+                    try {
+                        Long start = Long.parseLong(startPrice);
+                        Long end = Long.parseLong(endPrice);
+                        model.setListResult(productservice.findAllSearchPrice(pageble, searchKey, search, start, end));
+                        model.setTotalItem(productservice.getTotalItemSearchPrice(searchKey, search, start, end));
+                        model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+                    } catch (NumberFormatException e) {
+                        req.setAttribute("error", "Khoảng giá không hợp lệ.");
+                    }
+                } else {
+                    model.setListResult(productservice.findAllSearch(pageble, searchKey, search));
+                    model.setTotalItem(productservice.getTotalItemSearch(searchKey, search));
+                    model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+                }
+            }
         }
 
-        // Set the model attributes to forward to the view
-        req.setAttribute("productModel", model);
+        // Đặt model sản phẩm vào request để sử dụng trong JSP
+        req.setAttribute("model", model);
 
-        // Forward to the shop view page
-        RequestDispatcher rq = req.getRequestDispatcher("views/shop.jsp");
-        rq.forward(req, res);
+        // Chuyển hướng đến trang shop.jsp để hiển thị kết quả
+        RequestDispatcher rd = req.getRequestDispatcher("/views/shop.jsp");
+        rd.forward(req, res);
     }
+
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -85,4 +110,3 @@ public class ShopController extends HttpServlet {
         super.doPost(req, resp);
     }
 }
-

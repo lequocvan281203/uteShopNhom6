@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 
 public class DBconnectMySQL {
+	
 	private static String USERNAME = "root";
 	private static String PASSWORD = "123456";
 	private static String DRIVER = "com.mysql.cj.jdbc.Driver";
