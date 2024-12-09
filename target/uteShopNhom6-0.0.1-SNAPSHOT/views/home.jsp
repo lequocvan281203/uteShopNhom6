@@ -70,7 +70,7 @@
         <div class="row px-xl-5">
             <div class="col-md-6 pb-4">
                 <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="https://picare.vn/wp-content/uploads/2018/08/loreal.png" alt="">
+                    <img src="static/images/banner2.png" alt="">
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">Giảm 10% cho đơn hàng đầu tiên</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Thương hiệu uy tín</h1>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-md-6 pb-4">
                 <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="https://www.wheystore.vn/upload/news_optimize/main/1043_catalog_tang_ma_giam_gia_50_000d_cho_don_tren_1_trieu_tu_3_3_toi_10_3_2020_main_1587725915.png" alt="">
+                    <img src="static/images/banner1.jpg" alt="">
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">Giảm 10% cho đơn hàng đầu tiên</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Giá cả cạnh tranh</h1>
