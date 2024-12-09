@@ -1,6 +1,6 @@
 package utils;
 
-import javax.servlet.http.HttpServletRequest;
+import  jakarta.servlet.http.HttpServletRequest;
 
 public class SessionUtil //su ly di nguoi dung dang nhap (luu thong tin nguoi dung)
 {

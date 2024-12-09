@@ -56,7 +56,7 @@
 				<div id="header-carousel" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active" style="height: 410px;">
-							<img class="img-fluid" src="https://vanchuyensieutoc.com/Uploads/images/tin%20tuc/my-pham-este-lauer.jpg" alt="Image" style="opacity: 0.8">
+							<img class="img-fluid" src="${pageContext.request.contextPath}/static/images/banner2.png" alt="Image" style="opacity: 0.8">
 							<div
 								class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 								<div class="p-3" style="max-width: 700px;">
@@ -67,7 +67,7 @@
 							</div>
 						</div>
 						<div class="carousel-item" style="height: 410px;">
-							<img class="img-fluid" src="https://xanhlo.com/media/wysiwyg/tintuc/deal-my-pham-giam-gia-sephora.jpg" alt="Image" style="opacity: 0.8">
+							<img class="img-fluid" src="${pageContext.request.contextPath}/static/images/banner1.jpg" alt="Image" style="opacity: 0.8">
 							<div
 								class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 								<div class="p-3" style="max-width: 700px;">
