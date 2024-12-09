@@ -30,9 +30,21 @@
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
                                                 
+<<<<<<< HEAD
         
         
         
+=======
+        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
+                                                
+        
+        
+        
+>>>>>>> 176cc07debc0ea842c6092423de0f3931a4a067f
         
         <property name="context-root" value="uteShopNhom6"/>
                                                 

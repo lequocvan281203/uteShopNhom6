@@ -354,7 +354,76 @@ INSERT INTO `product` VALUES
 (162,'Phấn má hồng E.L.F.', 'Phấn má hồng E.L.F.', 100000, 5, 25, 47),
 (163,'Cọ trang điểm E.L.F.', 'Cọ trang điểm E.L.F.', 50000, 5, 20, 47);
 
+-- Cập nhật danh mục sản phẩm
 
+-- Tai nghe
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Tai nghe') WHERE ProductID IN (1, 9, 13, 16, 17, 38, 41);
+
+-- Điện thoại
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Điện thoại') WHERE ProductID IN (2, 6, 11, 26);
+
+-- Máy tính bảng
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Máy tính bảng') WHERE ProductID IN (3, 7, 12);
+
+-- Laptop
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Laptop') WHERE ProductID IN (4, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30);
+
+-- Đồng hồ thông minh
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Đồng hồ thông minh') WHERE ProductID IN (5, 8);
+
+-- Bút viết
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Bút viết') WHERE ProductID IN (43, 44, 48, 49, 53, 56, 57, 61, 62, 64, 65, 66, 67, 68, 69, 70, 71, 72);
+
+-- Sổ tay
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Sổ tay') WHERE ProductID IN (45, 50, 52);
+
+-- Tẩy
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Tẩy') WHERE ProductID IN (47, 55);
+
+-- Thước kẻ
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Thước kẻ') WHERE ProductID IN (51);
+
+-- Áo
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Áo') WHERE ProductID IN (74, 78, 82, 85, 88, 91, 93, 95, 98, 102, 104);
+
+-- Quần
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Quần') WHERE ProductID IN (75, 79, 83, 92, 96, 99, 105);
+
+-- Giày
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Giày') WHERE ProductID IN (73, 77, 81, 84, 87, 100);
+
+-- Túi xách
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Túi xách') WHERE ProductID IN (80, 86, 120);
+
+-- Mũ nón
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Mũ nón') WHERE ProductID IN (76, 89);
+
+-- Đèn trang trí
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Đèn trang trí') WHERE ProductID IN (119, 124, 127, 128, 130, 131);
+
+-- Gối
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Gối') WHERE ProductID IN (112);
+
+-- Chăn
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Chăn') WHERE ProductID IN (111);
+
+-- Rèm cửa
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Rèm cửa') WHERE ProductID IN (114);
+
+-- Hộp đựng đồ
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Hộp đựng đồ') WHERE ProductID IN (115, 121);
+
+-- Kem dưỡng da
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Kem dưỡng da') WHERE ProductID IN (133, 136, 144, 148);
+
+-- Sữa rửa mặt
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Sữa rửa mặt') WHERE ProductID IN (132, 143);
+
+-- Son môi
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Son môi') WHERE ProductID IN (138, 140, 149, 155);
+
+-- Phấn mắt
+UPDATE product SET CategoryID = (SELECT CategoryID FROM category WHERE CategoryName = 'Phấn mắt') WHERE ProductID IN (139, 159);
 
 
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
