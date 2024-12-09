@@ -77,16 +77,4 @@ public class PromotionDaoImpl extends AbstractDao<PromotionModel> implements Pro
 		return count(sql,Search);
 	}
 
-	@Override
-	public List<PromotionModel> findByCategoryId(Pageble pageble, Long categoryId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int getTotalItemByCategoryId(Long categoryId) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

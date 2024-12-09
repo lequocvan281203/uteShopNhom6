@@ -16,7 +16,5 @@ public interface PromotionDao {
 	Long insertPromotion(PromotionModel promotionModel);
 	void updatePromotion(PromotionModel promotionModel);
 	void deletePromotion(long id);
-	List<PromotionModel> findByCategoryId(Pageble pageble, Long categoryId);
-	int getTotalItemByCategoryId(Long categoryId);
 	
 }

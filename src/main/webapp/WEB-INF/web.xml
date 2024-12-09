@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
-  <display-name>WEB_FINAL_PROJECT</display-name>
-     
-	<filter> <!-- lang nghe bộ lọc url để chọn ra (decorators) -->	
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>UTESHOP</display-name>
+
+
+	<filter> <!-- lang nghe bộ lọc url để chọn ra (decorators) -->
 		<filter-name>sitemesh</filter-name>
 		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
 	</filter>
-	
+
 	<filter-mapping>
 		<filter-name>sitemesh</filter-name>
-		<url-pattern>/*</url-pattern>  
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	
+
+
 	<filter>
 		<filter-name>servletFilter</filter-name> <!-- su dung cho filter AuthorizationFilter -->
 		<filter-class>filter.AuthorizationFilter</filter-class>
@@ -21,12 +25,12 @@
 		<filter-name>servletFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
 	<session-config>
 		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>
-	
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
