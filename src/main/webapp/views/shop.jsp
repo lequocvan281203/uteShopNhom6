@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp"%>
 <body>
 	<div class="mb-1">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 50px">
@@ -85,6 +86,7 @@
 					</div>
 					<!-- Product List start -->
 					<c:forEach items="${model.listResult}" var="product">
+				
 						<div class="col-lg-4 col-md-6 col-sm-12 pb-1">
 							<a href="detail?pid=${product.productID}">
 								<div class="card product-item border-0 mb-4">
