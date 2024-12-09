@@ -69,10 +69,6 @@ public class LoginController extends HttpServlet {
         if ("login".equals(action)) {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-
-            // In thông tin đăng nhập ra console
-            System.out.println("Tên đăng nhập: " + username);
-            System.out.println("Mật khẩu: " + password); 
             
             // Sử dụng phương thức findByUserNamePasswordStatus để kiểm tra đăng nhập
             UserModel user = userService.findByUserNamePasswordStatus(username, password);
