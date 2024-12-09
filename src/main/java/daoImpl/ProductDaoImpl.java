@@ -91,6 +91,8 @@ public class ProductDaoImpl extends AbstractDao<ProductModel> implements Product
 		}
 		return allProduct;
 	}
+	
+	
 
 	@Override
 	public int getTotalItem() {
