@@ -37,7 +37,7 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-LOCK TABLES `product` WRITE;
+LOCK TABLES `product` WRITE, `category` READ; 
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
 
 -- Phụ kiện công nghệ--
