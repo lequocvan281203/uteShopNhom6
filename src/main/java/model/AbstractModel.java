@@ -37,7 +37,7 @@ public class AbstractModel<T> {
 	}
 	public Integer getMaxPageItem() {
 //				if (maxPageItem == null) {
-//		    maxPageItem = 163; // Gán giá trị mặc định
+//		    maxPageItem =9 ; // Gán giá trị mặc định
 //		    // Hoặc hiển thị thông báo lỗi
 //		}
 		return maxPageItem;

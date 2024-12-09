@@ -40,7 +40,46 @@ INSERT INTO `category` VALUES
 (3,'Thời trang', 'static/images/category/Thời trang.jpg','<i class=\"fa fa-user\"></i>',0),
 (4,'Đồ trang trí phòng', 'static/images/category/Đồ trang trí phòng.jpg','<i class=\"fa fa-user\"></i>',0),
 (5, 'Sản phẩm làm đẹp', 'static/images/category/Sản phẩm làm đẹp.jpg','<i class=\"fa fa-user\"></i>',0);
--- (6,'<i class=\"fa fa-list\"></i>',0)
+-- Thêm danh mục con
+
+-- Phụ kiện công nghệ (CategoryID = 1)
+INSERT INTO category(CategoryName, ImageLink, Icon, ParentID) VALUES
+('Tai nghe', 'static/images/category/Tai nghe.jpg','<i class=\"fa fa-headphones\"></i>', 1), 
+('Điện thoại', 'static/images/category/Điện thoại.jpg','<i class=\"fa fa-mobile\"></i>', 1),
+('Máy tính bảng', 'static/images/category/Máy tính bảng.jpg','<i class=\"fa fa-tablet\"></i>', 1),
+('Laptop', 'static/images/category/Laptop.jpg','<i class=\"fa fa-laptop\"></i>', 1),
+('Đồng hồ thông minh', 'static/images/category/Đồng hồ thông minh.jpg','<i class=\"fa fa-clock-o\"></i>', 1);
+
+-- Đồ dùng học tập (CategoryID = 2)
+INSERT INTO category(CategoryName, ImageLink, Icon, ParentID) VALUES
+('Bút viết', 'static/images/category/Bút viết.jpg','<i class=\"fa fa-pencil\"></i>', 2),
+('Sổ tay', 'static/images/category/Sổ tay.jpg','<i class=\"fa fa-book\"></i>', 2),
+('Tẩy', 'static/images/category/Tẩy.jpg','<i class=\"fa fa-eraser\"></i>', 2),
+('Thước kẻ', 'static/images/category/Thước kẻ.jpg','<i class=\"fa fa-ruler\"></i>', 2);
+
+-- Thời trang (CategoryID = 3)
+INSERT INTO category(CategoryName, ImageLink, Icon, ParentID) VALUES
+('Áo', 'static/images/category/Áo.jpg','<i class=\"fa fa-tshirt\"></i>', 3),
+('Quần', 'static/images/category/Quần.jpg','<i class=\"fa fa-male\"></i>', 3),
+('Giày', 'static/images/category/Giày.jpg','<i class=\"fa fa-shoe-prints\"></i>', 3),
+('Túi xách', 'static/images/category/Túi xách.jpg','<i class=\"fa fa-shopping-bag\"></i>', 3),
+('Mũ nón', 'static/images/category/Mũ nón.jpg','<i class=\"fa fa-hat-cowboy\"></i>', 3);
+
+-- Đồ trang trí phòng (CategoryID = 4)
+INSERT INTO category(CategoryName, ImageLink, Icon, ParentID) VALUES
+('Đèn trang trí', 'static/images/category/Đèn trang trí.jpg','<i class=\"fa fa-lightbulb-o\"></i>', 4),
+('Gối', 'static/images/category/Gối.jpg','<i class=\"fa fa-bed\"></i>', 4),
+('Chăn', 'static/images/category/Chăn.jpg','<i class=\"fa fa-blanket\"></i>', 4),
+('Rèm cửa', 'static/images/category/Rèm cửa.jpg','<i class=\"fa fa-window-maximize\"></i>', 4),
+('Hộp đựng đồ', 'static/images/category/Hộp đựng đồ.jpg','<i class=\"fa fa-box\"></i>', 4);
+
+-- Sản phẩm làm đẹp (CategoryID = 5)
+INSERT INTO category(CategoryName, ImageLink, Icon, ParentID) VALUES
+('Kem dưỡng da', 'static/images/category/Kem dưỡng da.jpg','<i class=\"fa fa-pump-soap\"></i>', 5),
+('Sữa rửa mặt', 'static/images/category/Sữa rửa mặt.jpg','<i class=\"fa fa-soap\"></i>', 5),
+('Son môi', 'static/images/category/Son môi.jpg','<i class=\"fa fa-lips\"></i>', 5),
+('Phấn mắt', 'static/images/category/Phấn mắt.jpg','<i class=\"fa fa-eye\"></i>', 5),
+('Nước hoa', 'static/images/category/Nước hoa.jpg','<i class=\"fa fa-spray-can\"></i>', 5);
 
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
