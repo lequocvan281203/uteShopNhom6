@@ -57,7 +57,7 @@ public class UserModel extends AbstractModel<UserModel> {
 	public void setRepeatPassword(String repeatPassword) {
 		this.repeatPassword = repeatPassword;
 	}
-	
+
 	@Override
 	public String toString() {
 	    return "UserModel{" +

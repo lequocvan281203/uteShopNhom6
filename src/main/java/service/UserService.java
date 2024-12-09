@@ -14,12 +14,12 @@ public interface UserService {
 	void deleteUser(long ids[]);
 	UserModel updateUser(UserModel userModel);
 	UserModel findByUserNameSdt(String userName,String Sdt);
-	
+
 	UserModel findByUserName(String userName);
 	UserModel register(String userName, String password, String fullName, String sdt, long roleId);
-	
+
 	//Paging
-	
+
 	int getTotalItem();
 	int getTotalItemSearch(String key,String search);
 	List<UserModel> findAll(Pageble pageble);

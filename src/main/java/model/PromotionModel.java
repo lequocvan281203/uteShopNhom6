@@ -10,7 +10,7 @@ public class PromotionModel extends AbstractModel<PromotionModel>
 	private Date endDate;
 	private int saleOff;
 	private ProductModel productModel = new ProductModel();
-	
+
 	public Long getPromotionID() {
 		return promotionID;
 	}
@@ -47,5 +47,5 @@ public class PromotionModel extends AbstractModel<PromotionModel>
 	public void setProductModel(ProductModel productModel) {
 		this.productModel = productModel;
 	}
-	
+
 }

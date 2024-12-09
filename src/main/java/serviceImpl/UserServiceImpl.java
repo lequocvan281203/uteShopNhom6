@@ -13,11 +13,11 @@ public class UserServiceImpl implements UserService{
 	UserDao userDAO = new UserDaoImpl();
 
 	@Override
-	public UserModel findByUserNamePasswordStatus(String userName, String password) 
+	public UserModel findByUserNamePasswordStatus(String userName, String password)
 	{
 			return userDAO.findByUserNamePasswordStatus(userName, password);
 	}
-	
+
 	@Override
 	public UserModel findByUserName(String userName) {
 	    return userDAO.findByUserName(userName);
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService{
 	    }
 	    return null; // Nếu không thành công, trả về null
 	}
-	
+
 	@Override
 	public UserModel findOne(Long id) {
 		return userDAO.findOne(id);
@@ -54,7 +54,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<UserModel> findAll() 
+	public List<UserModel> findAll()
 	{
 		return userDAO.findAll();
 	}
@@ -113,10 +113,10 @@ public class UserServiceImpl implements UserService{
 	public UserModel updateStatusUser(Long id) {
 		userDAO.updateStatusUser(id);
 		return userDAO.findOne(id);
-		
+
 	}
-	
-	
-	
+
+
+
 
 }

@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import  jakarta.servlet.RequestDispatcher;
+import  jakarta.servlet.ServletException;
+import  jakarta.servlet.annotation.WebServlet;
+import  jakarta.servlet.http.HttpServlet;
+import  jakarta.servlet.http.HttpServletRequest;
+import  jakarta.servlet.http.HttpServletResponse;
 
 import model.BillModel;
 import paging.PageRequest;
@@ -28,7 +28,7 @@ public class ListBill extends HttpServlet{
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
-		Map<String, String> dataMap = new HashMap<String, String>();
+		Map<String, String> dataMap = new HashMap<>();
 		dataMap.put("fullname", "Tên khách hàng");
 		dataMap.put("sdt", "Số điện thoại");
 		dataMap.put("Date", "Ngày đặt hàng");
@@ -48,7 +48,7 @@ public class ListBill extends HttpServlet{
 			if(billService.getTotalItemSearch(model.getKey(), model.getSearch())==0) {
 				model.setTotalItem(1);
 			}
-			else 
+			else
 			{
 				model.setTotalItem(billService.getTotalItemSearch(model.getKey(), model.getSearch()));
 			}
@@ -57,7 +57,7 @@ public class ListBill extends HttpServlet{
 		req.setAttribute("model", model);
 		RequestDispatcher rq = req.getRequestDispatcher("views/admin/bill/listbill.jsp");
 		rq.forward(req, resp);
-		
+
 	}
 
 }

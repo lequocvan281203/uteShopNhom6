@@ -2,8 +2,6 @@ package daoImpl;
 
 import java.util.List;
 
-
-
 import dao.UserDao;
 import mapper.UserMapper;
 import model.UserModel;
@@ -15,7 +13,7 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 
 	@Override
 	public UserModel findByUserNamePasswordStatus(String userName, String password) {
-	
+
 		if(password == null) {
 			StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
 			sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
@@ -31,7 +29,7 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 			return users.isEmpty() ? null : users.get(0);
 		}
 	}
-	
+
 	@Override
 	public UserModel findByUserName(String userName) {
 	    String sql = "SELECT * FROM user WHERE username = ?";
@@ -50,7 +48,7 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 			String sql = "INSERT INTO user (username, password, fullname,status,roleid,sdt) VALUES(?,?,?,1,2,?) ";
 			return insert(sql, userModel.getUserName(),userModel.getPassword(),userModel.getFullName(),userModel.getSdt());
 		}
-		else 
+		else
 		{
 			String sql = "INSERT INTO user (username, password, fullname,status,roleid,sdt) VALUES(?,?,?,1,?,?) ";
 			return insert(sql, userModel.getUserName(),userModel.getPassword(),userModel.getFullName(),userModel.getRoleId(),userModel.getSdt());
@@ -74,7 +72,7 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 	public void chagePassword(UserModel userModel) {
 		String sql = "UPDATE user SET password = ? where id = ?";
 		update(sql, userModel.getPassword(),userModel.getId());
-		
+
 	}
 
 	@Override
@@ -97,14 +95,14 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 	public void deleteUser(Long id) {
 		String sql = "UPDATE user SET status = 0 where id = ?";
 		update(sql,id);
-		
+
 	}
 
 	@Override
 	public void updateUser(UserModel userModel) {
 		String sql = "UPDATE user SET password = ?, fullname = ?, roleid = ?, sdt = ? where id = ?";
 		update(sql,userModel.getPassword(),userModel.getFullName(),userModel.getRoleId(),userModel.getSdt(),userModel.getId());
-		
+
 	}
 
 	@Override
@@ -146,7 +144,7 @@ public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 	public void updateStatusUser(Long id) {
 		String sql = "UPDATE user SET status = 1 where id = ?";
 		update(sql,id);
-		
+
 	}
 
 }

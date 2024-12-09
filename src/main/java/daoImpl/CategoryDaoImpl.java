@@ -13,6 +13,7 @@ public class CategoryDaoImpl extends AbstractDao<CategoryModel> implements Categ
 	public List<CategoryModel> findAll() {
 		String query = "select * from category where ParentID=0";
 		List<CategoryModel> category = query(query, new CategoryMapper());
+//		System.out.println(category);
 		for(CategoryModel i : category) {
 			String subquery = "select * from category where ParentID=?";
 			i.setChildCategory(query(subquery, new CategoryMapper(), i.getCategoryID()));
@@ -90,6 +91,6 @@ public class CategoryDaoImpl extends AbstractDao<CategoryModel> implements Categ
 	}
 
 
-	
+
 
 }

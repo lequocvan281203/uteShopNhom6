@@ -10,7 +10,7 @@ import paging.Pageble;
 public class BrandDaoImpl extends AbstractDao<BrandModel> implements BrandDao {
 
 	@Override
-	public List<BrandModel> findAll() 
+	public List<BrandModel> findAll()
 	{
 		String query="select * from brand";
 		return query(query, new BrandMapper());
@@ -35,7 +35,7 @@ public class BrandDaoImpl extends AbstractDao<BrandModel> implements BrandDao {
 	public BrandModel getOne(Long id) {
 		String sql ="select * from brand where BrandID = ?";
 		List<BrandModel> brandModels = query(sql, new BrandMapper(), id);
-		return brandModels.isEmpty() ? null : brandModels.get(0); 
+		return brandModels.isEmpty() ? null : brandModels.get(0);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class BrandDaoImpl extends AbstractDao<BrandModel> implements BrandDao {
 	public void deleteBrand(Long id) {
 		String sql = "delete FROM brand WHERE BrandID = ?";
 		update(sql, id);
-		
+
 	}
 
 	@Override

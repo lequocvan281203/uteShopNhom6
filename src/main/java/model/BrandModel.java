@@ -5,7 +5,7 @@ public class BrandModel extends AbstractModel<BrandModel>{
 	private String brandName;
 	private String description;
 	private String imageLink;
-	
+
 	public Long getBrandID() {
 		return brandID;
 	}
@@ -30,5 +30,5 @@ public class BrandModel extends AbstractModel<BrandModel>{
 	public void setImageLink(String imageLink) {
 		this.imageLink = imageLink;
 	}
-	
+
 }

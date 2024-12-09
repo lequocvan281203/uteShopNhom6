@@ -39,7 +39,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 			if(i.getBillID() != null) {
 				i.setOrderItem(query(subquery, new OrderItemMapper(), i.getBillID()));
 			}
-			
+
 		}
 		return allBill;
 	}
@@ -54,7 +54,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 			query.append(" limit " + pageble.getOffset() + "," + pageble.getLimit());
 		}
 		search = "%" + search + "%";
-		
+
 		List<BillModel> allBill = query(query.toString(), new BillMapper(), search);
 		for (BillModel i : allBill) {
 			String subquery = "select * from orderitem where BillID = ?";
@@ -69,7 +69,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 				j.getProduct().setImage(query(subquery3, new ImageMapper(), j.getProduct().getProductID()));
 			}
 		}
-		
+
 		return allBill;
 	}
 
@@ -97,7 +97,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 	public void updateBill(BillModel bill) {
 	    StringBuilder query = new StringBuilder(
 	        "UPDATE bill SET status = ?, total_price = ?, user_id = ? WHERE id = ?");
-	    
+
 	    // Truyền các tham số cần thiết vào câu lệnh
 	    Object[] parameters = {
 	        bill.getStatus(),           // Giả sử có trường status
@@ -105,7 +105,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 	        bill.getUserID(),           // Giả sử có trường user_id
 	        bill.getBillID()            // Truyền id của hóa đơn cần cập nhật
 	    };
-	    
+
 	    // Thực hiện câu lệnh UPDATE
 	    update(query.toString(), parameters);
 	}
@@ -113,10 +113,10 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 	@Override
 	public void deleteBill(Long id) {
 	    String query = "DELETE FROM bill WHERE id = ?";
-	    
+
 	    // Truyền tham số id vào câu lệnh DELETE
 	    Object[] parameters = { id };
-	    
+
 	    // Thực hiện câu lệnh DELETE
 	    update(query, parameters);
 	}
@@ -134,14 +134,14 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 			}
 			i.setOrderItem(orderItemModels);
 		}
-		return billModels.isEmpty() ? null : billModels.get(0); 
+		return billModels.isEmpty() ? null : billModels.get(0);
 	}
 
 	@Override
 	public void ThanhToanBill(Long id) {
 		String sql ="UPDATE bill SET Status = 1 WHERE BillID = ?";
 		update(sql, id);
-		
+
 	}
 
 	@Override
@@ -153,7 +153,7 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 			String UpdateSql="call updateAmountWhenRevertStatus(?,?)";
 			update(UpdateSql,itemModel.getProductID(),itemModel.getAmount());
 		}
-		
+
 	}
 
 	@Override
@@ -165,8 +165,8 @@ public class BillDaoImpl extends AbstractDao<BillModel> implements BillDao{
 			String UpdateSql="call updateAmount(?,?)";
 			update(UpdateSql,itemModel.getProductID(),itemModel.getAmount());
 		}
-		
-		
+
+
 	}
 
 	@Override

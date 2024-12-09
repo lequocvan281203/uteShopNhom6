@@ -14,11 +14,11 @@ public interface UserDao extends GenericDao<UserModel> {
 	UserModel findByUserNameSdt(String userName,String Sdt);
 	void deleteUser(Long id);
 	void updateUser(UserModel userModel);
-	
+
 	UserModel findByUserName(String userName);
-	
+
 	// paging
-	
+
 	List<UserModel> findAll(Pageble pageble);
 	List<UserModel> findAllSearch(Pageble pageble,String key,String search);
 	int getTotalItem();

@@ -31,5 +31,5 @@ public class PromotionMapper implements RowMapper<PromotionModel>
 			return null;
 		}
 	}
-	
+
 }

@@ -189,7 +189,7 @@ public class ProductDaoImpl extends AbstractDao<ProductModel> implements Product
 			insert(sqlImage,imageName);
 		}
 	}
-	
+
 	@Override
 	public void updateProductAmount(Long productID, int amount) {
 		String sql = "UPDATE product SET  Amount = ? WHERE ProductID=?";
@@ -234,7 +234,7 @@ public class ProductDaoImpl extends AbstractDao<ProductModel> implements Product
 	}
 
 	@Override
-	public int checkProductByCategoryID(Long categoryID) 
+	public int checkProductByCategoryID(Long categoryID)
 	{
 		int AllSL = 0;
 		CategoryModel categoryModel = categoryDao.getOne(categoryID);
@@ -279,6 +279,6 @@ public class ProductDaoImpl extends AbstractDao<ProductModel> implements Product
 		return count(query,id,SL);
 	}
 
-	
+
 
 }

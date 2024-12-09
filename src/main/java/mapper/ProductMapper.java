@@ -25,17 +25,17 @@ public class ProductMapper implements RowMapper<ProductModel> {
 				categoryModel.setCategoryName(rs.getString("CategoryName"));
 				product.setCategoryModel(categoryModel);
 			}
-			catch (Exception e) 
+			catch (Exception e)
 			{
 				System.out.println(e.getMessage());
 			}
-			try 
+			try
 			{
 				BrandModel brandModel = new BrandModel();
 				brandModel.setBrandID(rs.getLong("BrandID"));
 				brandModel.setBrandName(rs.getString("BrandName"));
 				product.setBrandModel(brandModel);
-				
+
 			}
 			catch (Exception e) {
 				System.out.println(e.getMessage());

@@ -5,14 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-
+import  jakarta.servlet.RequestDispatcher;
+import  jakarta.servlet.ServletException;
+import  jakarta.servlet.annotation.WebServlet;
+import  jakarta.servlet.http.HttpServlet;
+import  jakarta.servlet.http.HttpServletRequest;
+import  jakarta.servlet.http.HttpServletResponse;
 
 import constant.SystemConstant;
 import model.UserModel;
@@ -37,7 +35,7 @@ public class ListUser extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		UserModel model = FormUtil.toModel(UserModel.class, request);
 		Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem());
-		Map<String, String> dataMap = new HashMap<String, String>();
+		Map<String, String> dataMap = new HashMap<>();
 		dataMap.put("username", "UserName");
 		dataMap.put("password", "Password");
 		dataMap.put("fullname", "Họ tên");
@@ -47,24 +45,24 @@ public class ListUser extends HttpServlet{
 		request.setAttribute("dataMap", dataMap);
 		if(request.getParameter("message") != null) {
 			String message = request.getParameter("message");
-			if(message.equals("error_system")) 
+			if(message.equals("error_system"))
 			{
 				request.setAttribute("alert","danger");
 				request.setAttribute("message",resourceBundle.getString(message) );
 			}
-			else 
+			else
 			{
 				request.setAttribute("alert","success");
 				request.setAttribute("message",resourceBundle.getString(message) );
 			}
-			
+
 		}
 		if(model.getKey() == null && model.getSearch()==null) {
 			model.setListResult(userService.findAll(pageble));
 			model.setTotalItem(userService.getTotalItem());
 			model.setTotalPage((int) Math.ceil((double) model.getTotalItem()/ model.getMaxPageItem()));
 		}
-		else 
+		else
 		{
 			model.setListResult(userService.findAllSearch(pageble, model.getKey(), model.getSearch()));
 			if(userService.getTotalItemSearch(model.getKey(), model.getSearch())==0) {
@@ -73,7 +71,7 @@ public class ListUser extends HttpServlet{
 			else {
 				model.setTotalItem(userService.getTotalItemSearch(model.getKey(), model.getSearch()));
 			}
-			
+
 			model.setTotalPage((int) Math.ceil((double) model.getTotalItem()/ model.getMaxPageItem()));
 		}
 		request.setAttribute(SystemConstant.MODEL, model);

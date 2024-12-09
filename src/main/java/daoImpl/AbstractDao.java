@@ -72,7 +72,7 @@ public class AbstractDao<T> implements GenericDao<T> {
 				}else if (parameter instanceof Date) {
 					statement.setDate(index, (Date) parameter);
 				}
-				
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
