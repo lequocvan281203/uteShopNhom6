@@ -1,5 +1,6 @@
 package daoImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import dao.UserDao;
@@ -11,24 +12,50 @@ import paging.Pageble;
 
 public class UserDaoImpl extends AbstractDao<UserModel> implements UserDao{
 
+//	@Override
+//	public UserModel findByUserNamePasswordStatus(String userName, String password) {
+//
+//		if(password == null) {
+//			StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
+//			sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
+//			sql.append(" WHERE username = ? ");
+//			List<UserModel> users = query(sql.toString(), new UserMapper(), userName);
+//			return users.isEmpty() ? null : users.get(0);
+//		}
+//		else {
+//			StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
+//			sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
+//			sql.append(" WHERE username = ? AND password = ? ");
+//			List<UserModel> users = query(sql.toString(), new UserMapper(), userName, password);
+//			return users.isEmpty() ? null : users.get(0);
+//		}
+//	}
+	
 	@Override
 	public UserModel findByUserNamePasswordStatus(String userName, String password) {
+	    StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
+	    sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
+	    sql.append(" WHERE username = ?");
 
-		if(password == null) {
-			StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
-			sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
-			sql.append(" WHERE username = ? ");
-			List<UserModel> users = query(sql.toString(), new UserMapper(), userName);
-			return users.isEmpty() ? null : users.get(0);
-		}
-		else {
-			StringBuilder sql = new StringBuilder("SELECT * FROM user AS u");
-			sql.append(" INNER JOIN role AS r ON r.id = u.roleid");
-			sql.append(" WHERE username = ? AND password = ? ");
-			List<UserModel> users = query(sql.toString(), new UserMapper(), userName, password);
-			return users.isEmpty() ? null : users.get(0);
-		}
+	    // Truy vấn với username và password
+	    List<UserModel> users = null;
+	    if (password != null) {
+	        sql.append(" AND password = ?");
+	        users = query(sql.toString(), new UserMapper(), userName, password);
+	    } else {
+	        // Trường hợp không có mật khẩu, chỉ cần truy vấn theo username
+	        users = query(sql.toString(), new UserMapper(), userName);
+	    }
+
+	    // Kiểm tra và đảm bảo users không phải là null
+	    if (users == null) {
+	        users = new ArrayList<>(); // Khởi tạo danh sách rỗng nếu query trả về null
+	    }
+
+	    return users.isEmpty() ? null : users.get(0);
 	}
+
+
 
 	@Override
 	public UserModel findByUserName(String userName) {

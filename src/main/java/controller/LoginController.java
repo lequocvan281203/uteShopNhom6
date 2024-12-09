@@ -27,9 +27,9 @@ public class LoginController extends HttpServlet {
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
 
     @Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        request.getRequestDispatcher("pages/login.html").forward(request, response);
+
         // Kiểm tra nếu action là "login"
         if ("login".equals(action)) {
             List<CategoryModel> allCategory = categoryService.findAll();
@@ -37,10 +37,11 @@ public class LoginController extends HttpServlet {
 
             // Thông báo lỗi hoặc thành công nếu có
             String message = request.getParameter("message");
-            String alert = request.getParameter("alert");
-            if (message != null && alert != null) {
+            if (message != null && resourceBundle.containsKey(message)) {
                 request.setAttribute("message", resourceBundle.getString(message));
-                request.setAttribute("alert", alert);
+            } else {
+                // Nếu không có khóa, có thể sử dụng mặc định
+                request.setAttribute("message", "Thông tin không chính xác.");
             }
 
             // Forward đến trang login.jsp
@@ -59,23 +60,30 @@ public class LoginController extends HttpServlet {
         }
     }
 
-    @Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userName = request.getParameter("username");
-        String password = request.getParameter("password");
 
-        // Xử lý đăng nhập
-        UserModel user = userService.findByUserNamePasswordStatus(userName, password);
-        if (user != null) {
-            // Lưu thông tin người dùng vào session
-            SessionUtil.getInstance().putValue(request, "USERMODEL", user);
-            response.sendRedirect(request.getContextPath() + "/home");  // Chuyển hướng về trang chủ
-        } else {
-            // Nếu đăng nhập không thành công, hiển thị thông báo lỗi
-            request.setAttribute("message", resourceBundle.getString("login.error"));
-            request.setAttribute("alert", "danger");
-            doGet(request, response);  // Forward lại trang login.jsp
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+
+        // Xử lý hành động đăng nhập
+        if ("login".equals(action)) {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            // Sử dụng phương thức findByUserNamePasswordStatus để kiểm tra đăng nhập
+            UserModel user = userService.findByUserNamePasswordStatus(username, password);
+
+            // Kiểm tra đăng nhập thành công
+            if (user != null) {
+                // Lưu thông tin người dùng vào session
+                SessionUtil.getInstance().putValue(request, "USERMODEL", user);
+                response.sendRedirect(request.getContextPath() + "/home");  // Chuyển hướng về trang chủ sau khi đăng nhập
+            } else {
+                // Nếu đăng nhập thất bại, chuyển hướng lại trang login với thông báo lỗi
+                response.sendRedirect(request.getContextPath() + "/dang-nhap?action=login&message=error&alert=danger");
+            }
         }
     }
+
 }
 
