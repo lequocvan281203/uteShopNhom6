@@ -162,12 +162,26 @@
 	        startPage: currentPage,
 	        visiblePages: 10,
 	        onPageClick: function (event, page) {
-	            //console.info(page + ' (from options)');
-	            if(currentPage != page)//new khong su ly cho nay page se load lien tuc
-	            {
-	            	$("#page").val(page);
-	 	            $("#maxPageItem").val(limit);//dung de put data
-	 	            $("#formSubmit2").submit(); /* su kien jquery khi submit action form qua trang */
+	            if(currentPage != page) {
+	                // Tạo URL mới
+	                var newUrl = new URL(window.location.href);
+	                newUrl.searchParams.set('page', page);
+	                newUrl.searchParams.set('maxPageItem', limit);
+
+	                // Kiểm tra xem có tham số startPrice và endPrice hay không
+	                if ($("#startPrice").val() && $("#endPrice").val()) {
+	                    newUrl.searchParams.set('startPrice', $("#startPrice").val());
+	                    newUrl.searchParams.set('endPrice', $("#endPrice").val());
+	                }
+
+	                // Kiểm tra xem có tham số key và search hay không
+	                if ($("input[name='key']").val() && $("input[name='search']").val()) {
+	                    newUrl.searchParams.set('key', $("input[name='key']").val());
+	                    newUrl.searchParams.set('search', $("input[name='search']").val());
+	                }
+
+	                // Chuyển hướng đến URL mới
+	                window.location.href = newUrl.toString(); 
 	            }
 	        }
 	    });

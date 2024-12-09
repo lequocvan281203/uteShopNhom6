@@ -96,7 +96,7 @@ public class ShopController extends HttpServlet {
 
         // Đặt model sản phẩm vào request để sử dụng trong JSP
         req.setAttribute("model", model);
-
+        
         // Chuyển hướng đến trang shop.jsp để hiển thị kết quả
         RequestDispatcher rd = req.getRequestDispatcher("/views/shop.jsp");
         rd.forward(req, res);
