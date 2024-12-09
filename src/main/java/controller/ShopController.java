@@ -110,6 +110,3 @@ public class ShopController extends HttpServlet {
         super.doPost(req, resp);
     }
 }
-
-
->>>>>>> 176cc07debc0ea842c6092423de0f3931a4a067f
