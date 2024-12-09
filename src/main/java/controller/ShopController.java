@@ -109,9 +109,6 @@ public class ShopController extends HttpServlet {
         // Optionally handle POST requests, such as adding products to cart
         super.doPost(req, resp);
     }
-<<<<<<< HEAD
-}
-=======
 }
 
 
