@@ -101,11 +101,3 @@ chạy theo thứ tự sau để tránh lỗi do ràng buộc khóa ngoại:
 ![Hình ảnh 7 - Thanh toán](image/app_image/Trang-thanh-toán.png)  
 ![Hình ảnh 8 - Trang quản trị](image/app_image/Trang-thống-kê_1.png)  
 ![Hình ảnh 12 - Trang quản trị](image/app_image/Trang-thống-kê_2.png)  
-
-**Lưu ý:**
-
-* Bạn cần thay thế `[Hình ảnh ...]` bằng các hình ảnh minh họa tương ứng.
-* Bạn nên cập nhật thêm thông tin về cách sử dụng website, các chức năng nổi bật, hoặc những điểm đặc biệt của dự án để thu hút người xem.
-* Đảm bảo rằng các liên kết và thông tin liên hệ trong file README.md là chính xác.
-
-Chúc bạn hoàn thiện dự án của mình một cách tốt nhất!
