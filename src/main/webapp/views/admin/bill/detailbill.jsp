@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <%@include file="/common/taglib.jsp" %>
 <c:url var="APIurl" value="/api-brand"/>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <html>
 <head>

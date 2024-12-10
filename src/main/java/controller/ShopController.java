@@ -32,6 +32,7 @@ public class ShopController extends HttpServlet {
         res.setCharacterEncoding("UTF-8");
         req.setCharacterEncoding("UTF-8");
 
+        if (1==1) {}
         // Lấy danh sách tất cả các danh mục để hiển thị trên navbar
         List<CategoryModel> allCategory = categoryservice.findAll();
         req.setAttribute("allcategory", allCategory);
