@@ -4,7 +4,7 @@
 
 UTEShop là dự án website bán hàng trực tuyến được thiết kế dành riêng cho sinh viên, với mục tiêu tạo ra một nền tảng thương mại điện tử hiện đại, đáp ứng nhu cầu mua sắm ngày càng tăng của sinh viên. 
 
-[![Trang chủ](image/app_image/Trang chủ_1.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang chủ_1.png)  
+![Trang chủ](image/app_image/Trang chủ_1.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang chủ_1.png)  
 
 Website được xây dựng với giao diện thân thiện, dễ sử dụng, chức năng đa dạng và bảo mật cao, mang đến trải nghiệm mua sắm trực tuyến thuận tiện và an toàn.
 
