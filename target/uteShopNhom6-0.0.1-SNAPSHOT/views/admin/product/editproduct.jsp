@@ -319,7 +319,7 @@ function deleteImage(deleteButton) {
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (result) { //result la ket qua tra ve vd : newModel,...
-            	window.location.href = "/WEB_FINAL_PROJECT/admin-product-edit?productID=${model.productID}";
+            	window.location.href = "/uteShopNhom6/admin-product-edit?productID=${model.productID}";
             	$('#Error').text("");
             	alert("Cập nhập thành công");
             },
