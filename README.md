@@ -4,7 +4,7 @@
 
 UTEShop là dự án website bán hàng trực tuyến được thiết kế dành riêng cho sinh viên, với mục tiêu tạo ra một nền tảng thương mại điện tử hiện đại, đáp ứng nhu cầu mua sắm ngày càng tăng của sinh viên. 
 
-![Trang chủ](image/app_image/Trang chủ_1.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang chủ_1.png)  
+![Trang chủ](image/app_image/Trang chủ_1.png)  
 
 Website được xây dựng với giao diện thân thiện, dễ sử dụng, chức năng đa dạng và bảo mật cao, mang đến trải nghiệm mua sắm trực tuyến thuận tiện và an toàn.
 
@@ -92,26 +92,15 @@ chạy theo thứ tự sau để tránh lỗi do ràng buộc khóa ngoại:
 
 ## Hình ảnh
 
-[![Hình ảnh 3 - Trang chủ](image/app_image/Trang chủ_1.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20ch%E1%BB%A7_1.png?raw=true)  
-
-[![Hình ảnh 9 - Trang chủ2](image/app_image/Trang chủ_2.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20ch%E1%BB%A7_2.png?raw=true)  
-
-[![Hình ảnh 10 - Trang chủ2](image/app_image/Trang chủ_3.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20ch%E1%BB%A7_3.png?raw=true)  
-
-[[[![Hình ảnh 4 - Danh sách sản phẩm](image/app_image/Trang danh mục sản phẩm.png)]](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20danh%20m%E1%BB%A5c%20s%E1%BA%A3n%20ph%E1%BA%A9m.png?raw=true)  
-
-[![Hình ảnh 5 - Chi tiết sản phẩm](image/app_image/Trang chi tiết sản phẩm.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20chi%20ti%E1%BA%BFt%20s%E1%BA%A3n%20ph%E1%BA%A9m.png?raw=true)  
-
-[![Hình ảnh 6 - Giỏ hàng](image/app_image/Trang giỏ hàng.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20gi%E1%BB%8F%20h%C3%A0ng.png?raw=true)  
-
-[![Hình ảnh 7 - Thanh toán](image/app_image/Trang thanh toán.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20thanh%20to%C3%A1n.png?raw=true)  
-
-[![Hình ảnh 8 - Trang quản trị](image/app_image/Trang thống kê_1.png)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20th%E1%BB%91ng%20k%C3%AA_1.png?raw=true)  
-
-[![image](https://github.com/user-attachments/assets/20649916-c737-4732-b5b5-641efd92761f)](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20th%E1%BB%91ng%20k%C3%AA_2.png?raw=true)  
-
-[![Uploading image.png…]()](https://github.com/lequocvan281203/uteShopNhom6/blob/main/image/app_image/Trang%20qu%E1%BA%A3n%20l%C3%BD%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng.png?raw=true)  
-
+![Hình ảnh 3 - Trang chủ](image/app_image/Trang chủ_1.png)  
+![Hình ảnh 9 - Trang chủ2](image/app_image/Trang chủ_2.png)  
+![Hình ảnh 10 - Trang chủ3](image/app_image/Trang chủ_3.png)  
+![Hình ảnh 4 - Danh sách sản phẩm](image/app_image/Trang danh mục sản phẩm.png)  
+![Hình ảnh 5 - Chi tiết sản phẩm](image/app_image/Trang chi tiết sản phẩm.png)  
+![Hình ảnh 6 - Giỏ hàng](image/app_image/Trang giỏ hàng.png)  
+![Hình ảnh 7 - Thanh toán](image/app_image/Trang thanh toán.png)  
+![Hình ảnh 8 - Trang quản trị](image/app_image/Trang thống kê_1.png)  
+![Hình ảnh 12 - Trang quản trị](image/app_image/Trang thống kê_2.png)  
 
 **Lưu ý:**
 
