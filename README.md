@@ -4,11 +4,11 @@
 
 UTEShop là dự án website bán hàng trực tuyến được thiết kế dành riêng cho sinh viên, với mục tiêu tạo ra một nền tảng thương mại điện tử hiện đại, đáp ứng nhu cầu mua sắm ngày càng tăng của sinh viên. 
 
-![Trang chủ](image/app_image/Trang chủ_1.png)  
+![Trang chủ](image/app_image/Trang-chủ_1.png)
 
 Website được xây dựng với giao diện thân thiện, dễ sử dụng, chức năng đa dạng và bảo mật cao, mang đến trải nghiệm mua sắm trực tuyến thuận tiện và an toàn.
 
-![Trang danh mục sản phẩm](image/app_image/Trang danh mục sản phẩm.png)
+![Trang danh mục sản phẩm](image/app_image/Trang-danh-mục-sản-phẩm.png)
 
 ## Chức năng chính
 
@@ -92,15 +92,15 @@ chạy theo thứ tự sau để tránh lỗi do ràng buộc khóa ngoại:
 
 ## Hình ảnh
 
-![Hình ảnh 3 - Trang chủ](image/app_image/Trang chủ_1.png)  
-![Hình ảnh 9 - Trang chủ2](image/app_image/Trang chủ_2.png)  
-![Hình ảnh 10 - Trang chủ3](image/app_image/Trang chủ_3.png)  
-![Hình ảnh 4 - Danh sách sản phẩm](image/app_image/Trang danh mục sản phẩm.png)  
-![Hình ảnh 5 - Chi tiết sản phẩm](image/app_image/Trang chi tiết sản phẩm.png)  
-![Hình ảnh 6 - Giỏ hàng](image/app_image/Trang giỏ hàng.png)  
-![Hình ảnh 7 - Thanh toán](image/app_image/Trang thanh toán.png)  
-![Hình ảnh 8 - Trang quản trị](image/app_image/Trang thống kê_1.png)  
-![Hình ảnh 12 - Trang quản trị](image/app_image/Trang thống kê_2.png)  
+![Hình ảnh 3 - Trang chủ](image/app_image/Trang-chủ_1.png)  
+![Hình ảnh 9 - Trang chủ2](image/app_image/Trang-chủ_2.png)  
+![Hình ảnh 10 - Trang chủ3](image/app_image/Trang-chủ_3.png)  
+![Hình ảnh 4 - Danh sách sản phẩm](image/app_image/Trang-danh-mục-sản-phẩm.png)  
+![Hình ảnh 5 - Chi tiết sản phẩm](image/app_image/Trang-chi-tiết-sản-phẩm.png)  
+![Hình ảnh 6 - Giỏ hàng](image/app_image/Trang-giỏ-hàng.png)  
+![Hình ảnh 7 - Thanh toán](image/app_image/Trang-thanh-toán.png)  
+![Hình ảnh 8 - Trang quản trị](image/app_image/Trang-thống-kê_1.png)  
+![Hình ảnh 12 - Trang quản trị](image/app_image/Trang-thống-kê_2.png)  
 
 **Lưu ý:**
 
